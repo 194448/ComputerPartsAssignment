@@ -2,24 +2,26 @@
      Feb 21, 2020
      Computer building assignment
     -->
-    <Window Style="{StaticResource DocStyle}" x:Class="ComputerAssignment.MainWindow"
+<Window x:Class="ComputerAssignment.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ComputerAssignment"
         mc:Ignorable="d"
-        Title="Parts" Height="350" Width="525">
+        Title="Parts" Height="600" Width="740">
     <ScrollViewer >
         <StackPanel Background="Firebrick">
-            
             <Label x:Name="lblDisplay">What Information do you want to see?</Label>
-            <RadioButton x:Name="rbtnPartsList" Content="What parts are in the PC?" Checked="rbtnPartsList_Checked"/>
+            <RadioButton x:Name="rbtnPartsList" Content="What parts are in the PC?" Checked="rbtnPartsList_Checked" Unchecked="rbtnPartsList_Unchecked"/>
             <Label x:Name="lblPartsOutput" Visibility="Collapsed"></Label>
-            <RadioButton x:Name="rbtnExplanation" Content="Why these parts?" Checked="rbtnExplanation_Checked"/>
-            <Label x:Name="lblExplanationOutput"></Label>
-            <RadioButton x:Name="rbtnCost" Content="Show the cost" Checked="rbtnCost_Checked"/>
-            <Label x:Name="lblCostOutput"></Label>
+            <RadioButton x:Name="rbtnExplanation" Content="Why these parts?" Checked="rbtnExplanation_Checked" Unchecked="rbtnExplanation_Unchecked"/>
+            <Label x:Name="lblExplanationOutput" Visibility="Collapsed"></Label>
+            <RadioButton x:Name="rbtnCost" Content="Show the cost" Checked="rbtnCost_Checked" Unchecked="rbtnCost_Unchecked"/>
+            <Label x:Name="lblCostOutput" Visibility="Collapsed"></Label>
+            <Button x:Name="btnTotal" Visibility="Collapsed" Click="btnTotal_Click">calculate total</Button>
+            <Label x:Name="lblTotal"/>
+
         </StackPanel>
     </ScrollViewer>
 </Window>
